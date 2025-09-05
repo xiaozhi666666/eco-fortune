@@ -1,0 +1,96 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "专业算命应用，提供八字、星座、塔罗等多种占卜服务"
+    },
+    {
+      "name": "FortuneAbility_desc",
+      "value": "玄机算命 - 探索命运奥秘"
+    },
+    {
+      "name": "FortuneAbility_label",
+      "value": "玄机算命"
+    },
+    {
+      "name": "app_title",
+      "value": "玄机算命"
+    },
+    {
+      "name": "app_subtitle",
+      "value": "探索命运奥秘，洞察人生玄机"
+    },
+    {
+      "name": "bazi_title",
+      "value": "八字算命"
+    },
+    {
+      "name": "bazi_desc",
+      "value": "根据生辰八字分析命理运势"
+    },
+    {
+      "name": "zodiac_title",
+      "value": "星座运势"
+    },
+    {
+      "name": "zodiac_desc",
+      "value": "十二星座每日运势预测"
+    },
+    {
+      "name": "tarot_title",
+      "value": "塔罗占卜"
+    },
+    {
+      "name": "tarot_desc",
+      "value": "神秘塔罗牌指引人生方向"
+    },
+    {
+      "name": "name_test_title",
+      "value": "姓名测试"
+    },
+    {
+      "name": "name_test_desc",
+      "value": "姓名五格数理吉凶分析"
+    },
+    {
+      "name": "phone_analysis_title",
+      "value": "号码吉凶"
+    },
+    {
+      "name": "phone_analysis_desc",
+      "value": "手机号码数理吉凶测算"
+    },
+    {
+      "name": "history_title",
+      "value": "历史记录"
+    },
+    {
+      "name": "history_desc",
+      "value": "查看之前的算命记录"
+    },
+    {
+      "name": "enter_name",
+      "value": "请输入姓名"
+    },
+    {
+      "name": "enter_birthday",
+      "value": "请选择生日"
+    },
+    {
+      "name": "enter_phone",
+      "value": "请输入手机号码"
+    },
+    {
+      "name": "analyze_button",
+      "value": "开始分析"
+    },
+    {
+      "name": "share_result",
+      "value": "分享结果"
+    },
+    {
+      "name": "save_result",
+      "value": "保存记录"
+    }
+  ]
+}

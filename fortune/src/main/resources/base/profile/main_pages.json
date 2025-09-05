@@ -1,0 +1,11 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/BaziPage",
+    "pages/ZodiacPage",
+    "pages/TarotPage",
+    "pages/NameTestPage",
+    "pages/PhoneAnalysisPage",
+    "pages/HistoryPage"
+  ]
+}
