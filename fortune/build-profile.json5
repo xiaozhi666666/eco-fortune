@@ -4,7 +4,7 @@
   },
   "buildOptionSet": [
     {
-      "name": "release",
+      "name": "mykey",
       "arkOptions": {
         "obfuscation": {
           "ruleOptions": {

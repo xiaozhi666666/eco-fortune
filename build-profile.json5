@@ -1,10 +1,37 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/xiaozhi/.ohos/config/default_MyApplication_mH1livVjK51eeF-W2sOw0o-8zVcu5QobvAdQzmpSxj0=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BC662A8AF81AA4470A5C8DE7230CC6C433C34347DFE516056C39843B0A697C3FFD77A0A77EAEF87",
+          "profile": "/Users/xiaozhi/.ohos/config/default_MyApplication_mH1livVjK51eeF-W2sOw0o-8zVcu5QobvAdQzmpSxj0=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/xiaozhi/.ohos/config/default_MyApplication_mH1livVjK51eeF-W2sOw0o-8zVcu5QobvAdQzmpSxj0=.p12",
+          "storePassword": "0000001BA827F0EE254DFA8E9F0F8AE7003A4D8274CC40447A67505E3BECCD432427A806D12D3FC728BD92"
+        }
+      },
+      {
+        "name": "xuanji",
+        "type": "HarmonyOS",
+        "material": {
+          "storeFile": "/Users/xiaozhi/Desktop/hongmeng/mykey.p12",
+          "storePassword": "0000001B424A0FBD4101005544D52F020C9B88DD71F39B4F9848ABB7C62E74766726A4452AA17D2C944CE3",
+          "keyAlias": "mykey",
+          "keyPassword": "0000001B6785741602FB2AF006CD4A49870FC2F040640757FEF9E7F46F62DF9EBEE94B1FE28723210538D5",
+          "signAlg": "SHA256withECDSA",
+          "profile": "/Users/xiaozhi/Desktop/hongmeng/myProfileRelease.p7b",
+          "certpath": "/Users/xiaozhi/Desktop/hongmeng/mykey.cer"
+        }
+      }
+    ],
     "products": [
       {
         "name": "default",
-        "signingConfig": "default",
+        "signingConfig": "xuanji",
         "targetSdkVersion": "5.0.5(17)",
         "compatibleSdkVersion": "5.0.5(17)",
         "runtimeOS": "HarmonyOS",
