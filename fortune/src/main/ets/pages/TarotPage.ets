@@ -1,4 +1,5 @@
 import router from '@ohos.router';
+import { HistoryManager } from '../common/HistoryManager';
 
 @Entry
 @Component
@@ -6,6 +7,7 @@ struct TarotPage {
   @State showResult: boolean = false;
   @State resultText: string = '';
   @State cardName: string = '';
+  private historyManager: HistoryManager = HistoryManager.getInstance();
 
   drawCard() {
     const cards = ['愚者', '魔术师', '女祭司', '皇后', '皇帝', '恋人', '战车', '力量', '隐士', '命运之轮'];
@@ -108,21 +110,21 @@ struct TarotPage {
             .backgroundColor('#533483')
             .borderRadius(15)
             
-            Row({ space: 15 }) {
-              Button('保存记录')
-                .layoutWeight(1)
-                .height(45)
-                .backgroundColor('#0f3460')
-                .fontColor('#ffffff')
-                .borderRadius(22)
-              
-              Button('分享结果')
-                .layoutWeight(1)
-                .height(45)
-                .backgroundColor('#ffd700')
-                .fontColor('#1a1a2e')
-                .borderRadius(22)
-            }
+            Button('保存记录')
+              .width('60%')
+              .height(45)
+              .backgroundColor('#0f3460')
+              .fontColor('#ffffff')
+              .borderRadius(22)
+              .onClick(() => {
+                // 保存记录到历史
+                this.historyManager.addHistory(
+                  'tarot',
+                  `🃏 塔罗牌占卜结果 - ${this.cardName}`,
+                  this.resultText
+                );
+                console.info('保存塔罗占卜记录：' + this.cardName);
+              })
             .width('90%')
             .margin({ top: 20 })
             

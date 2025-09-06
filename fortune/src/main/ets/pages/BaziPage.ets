@@ -1,4 +1,5 @@
 import router from '@ohos.router';
+import { HistoryManager } from '../common/HistoryManager';
 
 @Entry
 @Component
@@ -6,6 +7,7 @@ struct BaziPage {
   @State name: string = '';
   @State showResult: boolean = false;
   @State resultText: string = '';
+  private historyManager: HistoryManager = HistoryManager.getInstance();
 
   calculateBazi() {
     if (this.name.trim() === '') {
@@ -113,21 +115,21 @@ struct BaziPage {
             .backgroundColor('#533483')
             .borderRadius(15)
             
-            Row({ space: 15 }) {
-              Button('保存记录')
-                .layoutWeight(1)
-                .height(45)
-                .backgroundColor('#0f3460')
-                .fontColor('#ffffff')
-                .borderRadius(22)
-              
-              Button('分享结果')
-                .layoutWeight(1)
-                .height(45)
-                .backgroundColor('#ffd700')
-                .fontColor('#1a1a2e')
-                .borderRadius(22)
-            }
+            Button('保存记录')
+              .width('60%')
+              .height(45)
+              .backgroundColor('#0f3460')
+              .fontColor('#ffffff')
+              .borderRadius(22)
+              .onClick(() => {
+                // 保存记录到历史
+                this.historyManager.addHistory(
+                  'bazi',
+                  `🔮 ${this.name}的八字算命`,
+                  this.resultText
+                );
+                console.info('保存八字算命记录：' + this.name);
+              })
             .width('90%')
             .margin({ top: 20 })
             

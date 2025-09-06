@@ -1,4 +1,5 @@
 import router from '@ohos.router';
+import { HistoryManager } from '../common/HistoryManager';
 
 @Entry
 @Component
@@ -6,6 +7,7 @@ struct ZodiacPage {
   @State selectedZodiac: string = '';
   @State showResult: boolean = false;
   @State resultText: string = '';
+  private historyManager: HistoryManager = HistoryManager.getInstance();
   
   private zodiacNames: string[] = [
     '白羊座', '金牛座', '双子座', '巨蟹座', 
@@ -117,21 +119,21 @@ struct ZodiacPage {
             .backgroundColor('#533483')
             .borderRadius(15)
             
-            Row({ space: 15 }) {
-              Button('保存记录')
-                .layoutWeight(1)
-                .height(45)
-                .backgroundColor('#0f3460')
-                .fontColor('#ffffff')
-                .borderRadius(22)
-              
-              Button('分享结果')
-                .layoutWeight(1)
-                .height(45)
-                .backgroundColor('#ffd700')
-                .fontColor('#1a1a2e')
-                .borderRadius(22)
-            }
+            Button('保存记录')
+              .width('60%')
+              .height(45)
+              .backgroundColor('#0f3460')
+              .fontColor('#ffffff')
+              .borderRadius(22)
+              .onClick(() => {
+                // 保存记录到历史
+                this.historyManager.addHistory(
+                  'zodiac',
+                  `⭐ ${this.selectedZodiac}今日运势`,
+                  this.resultText
+                );
+                console.info('保存星座运势记录：' + this.selectedZodiac);
+              })
             .width('90%')
             .margin({ top: 20 })
             
